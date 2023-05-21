@@ -4,24 +4,26 @@
 
 using System;
 
-namespace WallpaperManager.Models {
-  /// <summary>
-  ///   Specifies the action which should be executed when a <see cref="Wallpaper" /> is being double clicked.
-  /// </summary>
-  public enum WallpaperClickAction {
+namespace WallpaperManager.Models
+{
     /// <summary>
-    ///   No action should be performed.
+    ///   Specifies the action which should be executed when a <see cref="Wallpaper" /> is being double clicked.
     /// </summary>
-    NoAction,
+    public enum WallpaperClickAction
+    {
+        /// <summary>
+        ///   No action should be performed.
+        /// </summary>
+        NoAction,
 
-    /// <summary>
-    ///   The <see cref="Wallpaper" /> should be applied on the Windows Desktop.
-    /// </summary>
-    ApplyOnDesktop,
+        /// <summary>
+        ///   The <see cref="Wallpaper" /> should be applied on the Windows Desktop.
+        /// </summary>
+        ApplyOnDesktop,
 
-    /// <summary>
-    ///   The wallpaper configuration window should be shown for the selected <see cref="Wallpaper" />.
-    /// </summary>
-    ShowConfigurationWindow
-  }
+        /// <summary>
+        ///   The wallpaper configuration window should be shown for the selected <see cref="Wallpaper" />.
+        /// </summary>
+        ShowConfigurationWindow
+    }
 }

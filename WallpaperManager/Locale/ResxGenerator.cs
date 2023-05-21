@@ -4,6 +4,7 @@
 
 using System;
 
-namespace WallpaperManager {
-  public class ResxGenerator {}
+namespace WallpaperManager
+{
+    public class ResxGenerator { }
 }

@@ -4,39 +4,41 @@
 
 using System;
 
-namespace WallpaperManager.Models {
-  /// <summary>
-  ///   Specifies the position of an overlay text on the screen.
-  /// </summary>
-  public enum TextOverlayPosition {
+namespace WallpaperManager.Models
+{
     /// <summary>
-    ///   The text will be placed in the upper left corner of the screen.
+    ///   Specifies the position of an overlay text on the screen.
     /// </summary>
-    TopLeft,
+    public enum TextOverlayPosition
+    {
+        /// <summary>
+        ///   The text will be placed in the upper left corner of the screen.
+        /// </summary>
+        TopLeft,
 
-    /// <summary>
-    ///   The text will be centered in the upper border of the screen.
-    /// </summary>
-    TopMiddle,
+        /// <summary>
+        ///   The text will be centered in the upper border of the screen.
+        /// </summary>
+        TopMiddle,
 
-    /// <summary>
-    ///   The text will be placed in the upper right corner of the screen.
-    /// </summary>
-    TopRight,
+        /// <summary>
+        ///   The text will be placed in the upper right corner of the screen.
+        /// </summary>
+        TopRight,
 
-    /// <summary>
-    ///   The text will be placed in the lower left corner of the screen.
-    /// </summary>
-    BottomLeft,
+        /// <summary>
+        ///   The text will be placed in the lower left corner of the screen.
+        /// </summary>
+        BottomLeft,
 
-    /// <summary>
-    ///   The text will be centered in the lower border of the screen.
-    /// </summary>
-    BottomMiddle,
+        /// <summary>
+        ///   The text will be centered in the lower border of the screen.
+        /// </summary>
+        BottomMiddle,
 
-    /// <summary>
-    ///   The text will be placed in the lower right corner of the screen.
-    /// </summary>
-    BottomRight
-  }
+        /// <summary>
+        ///   The text will be placed in the lower right corner of the screen.
+        /// </summary>
+        BottomRight
+    }
 }

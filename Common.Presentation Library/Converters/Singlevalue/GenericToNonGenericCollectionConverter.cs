@@ -13,47 +13,55 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace Common.Presentation {
-  /// <threadsafety static="true" instance="false" />
-  public class GenericToNonGenericCollectionConverter<GenericCollectionItemType>: IValueConverter {
-    #region Methods: Convert, ConvertBack
-    /// <summary>
-    ///   Converts a <see cref="IList{GenericCollectionItemType}" /> instance to an <see cref="IList" /> instance.
-    /// </summary>
-    /// <inheritdoc cref="IValueConverter.Convert" />
-    public Object Convert(Object value, Type targetType, Object parameter, CultureInfo culture) {
-      IList<GenericCollectionItemType> genericList = (value as IList<GenericCollectionItemType>);
-      if (genericList == null) {
-        return DependencyProperty.UnsetValue;
-      }
+namespace Common.Presentation
+{
+    /// <threadsafety static="true" instance="false" />
+    public class GenericToNonGenericCollectionConverter<GenericCollectionItemType> : IValueConverter
+    {
+        #region Methods: Convert, ConvertBack
+        /// <summary>
+        ///   Converts a <see cref="IList{GenericCollectionItemType}" /> instance to an <see cref="IList" /> instance.
+        /// </summary>
+        /// <inheritdoc cref="IValueConverter.Convert" />
+        public Object Convert(Object value, Type targetType, Object parameter, CultureInfo culture)
+        {
+            IList<GenericCollectionItemType> genericList = (value as IList<GenericCollectionItemType>);
+            if (genericList == null)
+            {
+                return DependencyProperty.UnsetValue;
+            }
 
-      ArrayList nonGenericList = new ArrayList(genericList.Count);
-      foreach (GenericCollectionItemType item in genericList) {
-        nonGenericList.Add(item);
-      }
+            ArrayList nonGenericList = new ArrayList(genericList.Count);
+            foreach (GenericCollectionItemType item in genericList)
+            {
+                nonGenericList.Add(item);
+            }
 
-      return nonGenericList;
+            return nonGenericList;
+        }
+
+        /// <summary>
+        ///   Converts a <see cref="IList" /> instance to a <see cref="ReadOnlyCollection{Wallpaper}" />
+        ///   instance.
+        /// </summary>
+        /// <inheritdoc cref="IValueConverter.ConvertBack" />
+        public Object ConvertBack(Object value, Type targetType, Object parameter, CultureInfo culture)
+        {
+            IList nonGenericList = (value as IList);
+            if (nonGenericList == null)
+            {
+                return DependencyProperty.UnsetValue;
+            }
+
+            List<GenericCollectionItemType> genericList = new List<GenericCollectionItemType>(nonGenericList.Count);
+            foreach (Object item in nonGenericList)
+            {
+                Contract.Assert(item is GenericCollectionItemType);
+                genericList.Add((GenericCollectionItemType)item);
+            }
+
+            return new Collection<GenericCollectionItemType>(genericList);
+        }
+        #endregion
     }
-
-    /// <summary>
-    ///   Converts a <see cref="IList" /> instance to a <see cref="ReadOnlyCollection{Wallpaper}" />
-    ///   instance.
-    /// </summary>
-    /// <inheritdoc cref="IValueConverter.ConvertBack" />
-    public Object ConvertBack(Object value, Type targetType, Object parameter, CultureInfo culture) {
-      IList nonGenericList = (value as IList);
-      if (nonGenericList == null) {
-        return DependencyProperty.UnsetValue;
-      }
-      
-      List<GenericCollectionItemType> genericList = new List<GenericCollectionItemType>(nonGenericList.Count);
-      foreach (Object item in nonGenericList) {
-        Contract.Assert(item is GenericCollectionItemType);
-        genericList.Add((GenericCollectionItemType)item);
-      }
-      
-      return new Collection<GenericCollectionItemType>(genericList);
-    }
-    #endregion
-  }
 }

@@ -1,16 +1,18 @@
-﻿namespace Common.IO {
-  /// <summary>
-  ///   Specifies the type of a file system element.
-  /// </summary>
-  public enum FileSystemElementType {
+﻿namespace Common.IO
+{
     /// <summary>
-    ///   Specifies a folder.
+    ///   Specifies the type of a file system element.
     /// </summary>
-    Directory,
+    public enum FileSystemElementType
+    {
+        /// <summary>
+        ///   Specifies a folder.
+        /// </summary>
+        Directory,
 
-    /// <summary>
-    ///   Specifies a file.
-    /// </summary>
-    File,
-  }
+        /// <summary>
+        ///   Specifies a file.
+        /// </summary>
+        File,
+    }
 }
