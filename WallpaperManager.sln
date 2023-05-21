@@ -1,14 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31105.61
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallpaperManager", "WallpaperManager\WallpaperManager.csproj", "{3B6EBF8B-BD01-4B66-800E-2E3DFD27C9E5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2980E57F-55D3-4385-96F7-42EFDD06E0F8}"
-	ProjectSection(SolutionItems) = preProject
-		Wallpaper Manager.FxCop = Wallpaper Manager.FxCop
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common Library", "Common Library\Common Library.csproj", "{030C8ED2-1861-416D-AFD9-1A01E8B515BE}"
 EndProject
@@ -51,12 +46,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B87B5174-EAF9-45D0-AE9D-EC4C49636BAD}
-		BuildVersion_BuildVersioningStyle = None.None.None.None
-		BuildVersion_ConfigurationName = Any
-		BuildVersion_UpdateFileVersion = False
-		BuildVersion_UpdateAssemblyVersion = False
 		BuildVersion_AssemblyInfoFilename = 
+		BuildVersion_UpdateAssemblyVersion = False
+		BuildVersion_UpdateFileVersion = False
+		BuildVersion_ConfigurationName = Any
+		BuildVersion_BuildVersioningStyle = None.None.None.None
+		SolutionGuid = {B87B5174-EAF9-45D0-AE9D-EC4C49636BAD}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Wallpaper Manager.vsmdi
