@@ -615,7 +615,7 @@
         <MenuItem Header="{local:LocalizedString Menu.Help}">
           <MenuItem Header="{local:LocalizedString Menu.Changelog}" Command="{Binding ApplicationVM.ShowChangelogCommand}" />
 
-          <MenuItem Header="{local:LocalizedString Menu.CheckForUpdates}" Command="{Binding ApplicationVM.UpdateCheckCommand}" />
+          <!--<MenuItem Header="{local:LocalizedString Menu.CheckForUpdates}" Command="{Binding ApplicationVM.UpdateCheckCommand}" />-->
           
           <Separator />
 
